@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NapaSaathi — Measure with confidence</title>
+<style>
+:root{--ink:#142a3b;--muted:#627384;--teal:#087f78;--mint:#d9f5ed;--lime:#d5f36a;--paper:#f5f8f6;--line:#dce7e2;--white:#fff;--orange:#f5a15d}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}button,input,select{font:inherit}button{cursor:pointer;border:0;border-radius:14px;padding:12px 16px;font-weight:750;transition:.15s}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--orange);outline-offset:3px}.app{max-width:1160px;margin:auto;padding:24px}.nav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:8px 0 24px}.brand{display:flex;align-items:center;gap:11px;font-weight:900;font-size:1.1rem;letter-spacing:-.03em}.logo{display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:var(--teal);color:white;font-size:1.3rem}.nav-right{display:flex;align-items:center;gap:10px}.pill{border:1px solid var(--line);background:#fff;color:var(--ink);padding:9px 12px;border-radius:999px}.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:stretch}.hero-copy{background:var(--ink);color:white;border-radius:28px;padding:clamp(26px,5vw,52px);position:relative;overflow:hidden}.eyebrow{font-size:.76rem;text-transform:uppercase;letter-spacing:.14em;font-weight:900;color:var(--lime)}h1{font-size:clamp(2.5rem,5.5vw,4.7rem);line-height:.98;letter-spacing:-.065em;margin:18px 0}.hero-copy p{color:#d1e1e5;max-width:540px;font-size:1.05rem}.primary{background:var(--lime);color:var(--ink)}.secondary{background:var(--teal);color:white}.ghost{background:white;border:1px solid var(--line);color:var(--ink)}.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.hero-art{border-radius:28px;background:var(--mint);padding:24px;display:flex;flex-direction:column;justify-content:space-between;min-height:310px;position:relative;overflow:hidden}.art-top{display:flex;justify-content:space-between;align-items:center}.mini-tag{background:white;border-radius:999px;padding:7px 11px;font-size:.78rem;font-weight:800}.ruler{margin:24px auto 16px;width:min(100%,300px);height:112px;border-radius:22px;background:#fff;display:flex;align-items:center;justify-content:center;position:relative;transform:rotate(-7deg);box-shadow:0 14px 30px #1233}.ruler:before{content:"";position:absolute;inset:17px 18px;background:repeating-linear-gradient(90deg,var(--teal) 0 2px,transparent 2px 15px);opacity:.55}.ruler strong{z-index:1;background:var(--lime);padding:10px 16px;border-radius:12px;font-size:1.2rem}.art-bottom{display:flex;justify-content:space-between;gap:10px;font-size:.86rem;font-weight:750}.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin:34px 0 16px}.section-head h2{margin:0;font-size:1.65rem;letter-spacing:-.04em}.section-head p{margin:5px 0 0;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:white;border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 4px 18px #17342a06}.card h3{margin:12px 0 7px;letter-spacing:-.025em}.card p{margin:0;color:var(--muted);font-size:.94rem}.iconbox{display:grid;place-items:center;width:46px;height:46px;border-radius:15px;background:var(--mint);font-size:1.4rem}.workspace{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:grid;gap:7px;margin:15px 0}.field label{font-weight:800;font-size:.9rem}.field input,.field select{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:12px;background:white;color:var(--ink)}.result{background:var(--ink);color:white;border-radius:18px;padding:18px;margin-top:14px}.result small{color:#b9d1d3}.big-number{font-size:2.1rem;font-weight:900;letter-spacing:-.05em}.result p{color:#d1e1e5;margin:4px 0 0}.stepper{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:16px 0}.step-count{font-size:.82rem;font-weight:850;color:var(--teal)}.step-panel{background:#f4faf7;border:1px solid var(--line);border-radius:18px;padding:20px;min-height:160px}.step-panel h3{margin:8px 0}.step-panel p{margin:0;color:var(--muted)}.step-controls{display:flex;gap:9px;margin-top:15px;flex-wrap:wrap}.step-controls button{flex:1}.notice{margin-top:16px;background:#fff7e9;border:1px solid #f5d9b8;border-radius:14px;padding:12px 14px;color:#73451d;font-size:.88rem}.impact-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}.metric{padding:16px;background:var(--mint);border-radius:17px}.metric strong{display:block;font-size:1.55rem;letter-spacing:-.04em}.metric span{font-size:.82rem;color:#42655f}.footer{margin:34px 0 10px;border-top:1px solid var(--line);padding-top:20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:.85rem}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--ink);color:white;padding:12px 17px;border-radius:12px;box-shadow:0 10px 35px #0003;display:none;z-index:5}.lang-ur{direction:rtl}.hidden{display:none!important}@media(max-width:800px){.app{padding:16px}.hero,.workspace{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.hero-art{min-height:250px}.impact-row{grid-template-columns:1fr 1fr}.section-head{align-items:start;flex-direction:column}.nav{align-items:flex-start}.nav-right{flex-wrap:wrap;justify-content:flex-end}.hero-copy{padding:28px}.hero-copy h1{font-size:3rem}}@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+<header class="nav">
+  <div class="brand"><div class="logo" aria-hidden="true">↗</div><span>NapaSaathi</span></div>
+  <div class="nav-right"><button class="pill" id="langBtn" aria-label="Switch language">اردو / EN</button><button class="pill" id="speakBtn" aria-label="Read page aloud">🔊 Listen</button></div>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow" data-en="ACCESSIBLE MEASUREMENT • LESS WASTE" data-ur="آسان پیمائش • کم ضیاع">ACCESSIBLE MEASUREMENT • LESS WASTE</div>
+    <h1 data-en="Measure with confidence. Waste less." data-ur="اعتماد سے پیمائش کریں۔ ضیاع کم کریں۔">Measure with confidence.<br>Waste less.</h1>
+    <p data-en="A friendly measurement companion designed to make everyday measuring easier to follow—and help people use materials more thoughtfully." data-ur="روزمرہ پیمائش کو آسان بنانے اور چیزوں کو سوچ سمجھ کر استعمال کرنے میں مدد دینے والا ساتھی۔">A friendly measurement companion designed to make everyday measuring easier to follow—and help people use materials more thoughtfully.</p>
+    <div class="hero-actions"><button class="primary" onclick="document.getElementById('guide').scrollIntoView({behavior:'smooth'})" data-en="Try guided measuring →" data-ur="پیمائش شروع کریں ←">Try guided measuring →</button><button class="ghost" onclick="document.getElementById('waste').scrollIntoView({behavior:'smooth'})" data-en="Estimate material waste" data-ur="مواد کے ضیاع کا اندازہ">Estimate material waste</button></div>
+  </div>
+  <div class="hero-art" aria-label="Illustration of a measuring ruler">
+    <div class="art-top"><span class="mini-tag">DESIGNED FOR EVERYONE</span><span style="font-size:1.5rem">✳</span></div>
+    <div class="ruler"><strong>12.0 cm</strong></div>
+    <div class="art-bottom"><span>Clear steps</span><span>Audio support</span><span>Less waste</span></div>
+  </div>
+</section>
+<section>
+  <div class="section-head"><div><h2 data-en="Small tools, meaningful impact" data-ur="چھوٹے اوزار، بڑا فائدہ">Small tools, meaningful impact</h2><p data-en="Built around access, clarity, and more careful use of materials." data-ur="رسائی، وضاحت اور مواد کے بہتر استعمال کے لیے۔">Built around access, clarity, and more careful use of materials.</p></div></div>
+  <div class="grid">
+    <article class="card"><div class="iconbox">🎧</div><h3 data-en="Step-by-step guidance" data-ur="مرحلہ وار رہنمائی">Step-by-step guidance</h3><p data-en="Short instructions help users follow a consistent measuring process." data-ur="مختصر ہدایات پیمائش کا درست طریقہ اپنانے میں مدد دیتی ہیں۔">Short instructions help users follow a consistent measuring process.</p></article>
+    <article class="card"><div class="iconbox">♿</div><h3 data-en="Accessible by design" data-ur="ہر ایک کے لیے آسان">Accessible by design</h3><p data-en="Keyboard-friendly controls, readable contrast, and optional spoken instructions." data-ur="کی بورڈ سے استعمال، واضح رنگ اور بول کر سنانے کی سہولت۔">Keyboard-friendly controls, readable contrast, and optional spoken instructions.</p></article>
+    <article class="card"><div class="iconbox">♻️</div><h3 data-en="Waste awareness" data-ur="ضیاع میں کمی">Waste awareness</h3><p data-en="Estimate leftover material before a cut or project, then plan a reuse." data-ur="کٹائی سے پہلے بچے ہوئے مواد کا اندازہ لگائیں اور دوبارہ استعمال کا منصوبہ بنائیں۔">Estimate leftover material before a cut or project, then plan a reuse.</p></article>
+  </div>
+</section>
+<section id="guide">
+  <div class="section-head"><div><h2 data-en="Guided measuring" data-ur="رہنمائی کے ساتھ پیمائش">Guided measuring</h2><p data-en="A simple demo flow. Use a physical ruler or tape measure for the actual reading." data-ur="یہ ایک آسان رہنمائی ہے۔ اصل پیمائش کے لیے فیتہ یا پیمانہ استعمال کریں۔">A simple demo flow. Use a physical ruler or tape measure for the actual reading.</p></div><span class="step-count" id="stepCount">STEP 1 OF 3</span></div>
+  <div class="card">
+    <div class="step-panel" aria-live="polite"><div class="iconbox" id="stepIcon">①</div><h3 id="stepTitle">Prepare your item</h3><p id="stepText">Place the item on a flat surface. Smooth it gently and make sure the measuring tape starts at zero.</p></div>
+    <div class="stepper"><button class="ghost" id="prevStep">← Back</button><div style="font-size:.85rem;color:var(--muted)" id="stepHint">Take your time. Accuracy matters more than speed.</div><button class="secondary" id="nextStep">Next step →</button></div>
+    <div class="step-controls"><button class="ghost" id="readStep">🔊 Read this step aloud</button><button class="ghost" id="resetGuide">Start again</button></div>
+  </div>
+</section>
+<section id="waste">
+  <div class="section-head"><div><h2 data-en="Material waste estimator" data-ur="مواد کے ضیاع کا کیلکولیٹر">Material waste estimator</h2><p data-en="Try a planning estimate before cutting fabric, card, or another rectangular material." data-ur="کپڑا، گتہ یا مستطیل مواد کاٹنے سے پہلے اندازہ لگائیں۔">Try a planning estimate before cutting fabric, card, or another rectangular material.</p></div></div>
+  <div class="workspace">
+    <div class="card">
+      <div class="field"><label for="length" data-en="Material length (cm)" data-ur="مواد کی لمبائی (سینٹی میٹر)">Material length (cm)</label><input id="length" type="number" min="1" max="100000" value="200"></div>
+      <div class="field"><label for="width" data-en="Material width (cm)" data-ur="مواد کی چوڑائی (سینٹی میٹر)">Material width (cm)</label><input id="width" type="number" min="1" max="100000" value="150"></div>
+      <div class="field"><label for="used" data-en="Estimated area you will use (%)" data-ur="استعمال ہونے والا اندازاً حصہ (%)">Estimated area you will use (%)</label><input id="used" type="number" min="0" max="100" value="75"></div>
+      <button class="secondary" id="calculate" data-en="Calculate estimate" data-ur="حساب لگائیں">Calculate estimate</button>
+      <div class="notice" data-en="This is a planning estimate, not a guarantee. Real cutting layouts and irregular shapes change the result." data-ur="یہ صرف منصوبہ بندی کا اندازہ ہے۔ اصل کٹائی اور شکل سے نتیجہ بدل سکتا ہے۔">This is a planning estimate, not a guarantee. Real cutting layouts and irregular shapes change the result.</div>
+    </div>
+    <div class="card">
+      <div style="font-weight:850;color:var(--teal)" data-en="YOUR ESTIMATE" data-ur="آپ کا اندازہ">YOUR ESTIMATE</div>
+      <div class="result"><small data-en="Total material area" data-ur="کل مواد کا رقبہ">Total material area</small><div class="big-number" id="total">30,000 cm²</div><p id="totalM">3.00 m²</p></div>
+      <div class="result" style="background:#e4f8f0;color:var(--ink)"><small style="color:#42655f" data-en="Potential leftover area" data-ur="ممکنہ بچا ہوا رقبہ">Potential leftover area</small><div class="big-number" id="leftover">7,500 cm²</div><p id="leftM">0.75 m² · 25% estimated leftover</p></div>
+      <div class="impact-row"><div class="metric"><strong id="usedM">75%</strong><span data-en="planned use" data-ur="استعمال">planned use</span></div><div class="metric"><strong id="leftPercent">25%</strong><span data-en="leftover" data-ur="بچا ہوا">leftover</span></div><div class="metric"><strong id="reuseTip">Reuse</strong><span data-en="suggestion" data-ur="تجویز">suggestion</span></div></div>
+      <p style="color:var(--muted);font-size:.85rem;margin-top:14px" id="reuseText">Plan small offcuts for patches, samples, or repair kits.</p>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="section-head"><div><h2 data-en="Built to be tested, not just admired" data-ur="صرف خوبصورت نہیں، آزمانے کے لیے">Built to be tested, not just admired</h2><p data-en="This prototype demonstrates the core interaction. It does not yet use a camera or automatically measure objects." data-ur="یہ ابتدائی نمونہ بنیادی فیچرز دکھاتا ہے۔ یہ ابھی کیمرے سے خودکار پیمائش نہیں کرتا۔">This prototype demonstrates the core interaction. It does not yet use a camera or automatically measure objects.</p></div></div>
+  <div class="card"><h3 data-en="Next build milestones" data-ur="اگلے مراحل">Next build milestones</h3><div class="grid" style="margin-top:14px"><div><strong>01 · Validate</strong><p>Test the guide with people who find measuring difficult.</p></div><div><strong>02 · Improve</strong><p>Add saved measurements, more units, and clearer audio support.</p></div><div><strong>03 · Demonstrate</strong><p>Record a short demo and publish the code repository.</p></div></div></div>
+</section>
+</main>
+<footer class="footer"><span>✳ NapaSaathi · A social-impact hackathon prototype</span><span>Accessible measurement • Responsible material use</span></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+<script>
+const steps=[
+ {icon:"①",title:"Prepare your item",text:"Place the item on a flat surface. Smooth it gently and make sure the measuring tape starts at zero.",urTitle:"چیز کو تیار کریں",urText:"چیز کو ہموار سطح پر رکھیں، نرمی سے سیدھا کریں اور پیمانہ صفر سے شروع کریں۔"},
+ {icon:"②",title:"Measure slowly",text:"Keep the tape straight and level. Read the mark directly above the edge; ask someone to help if the mark is hard to see.",urTitle:"آہستہ پیمائش کریں",urText:"فیتہ سیدھا رکھیں۔ کنارے کے سامنے نشان پڑھیں؛ اگر نشان دیکھنا مشکل ہو تو مدد لیں۔"},
+ {icon:"③",title:"Record and double-check",text:"Write down the value and unit. Repeat once to check it before cutting or ordering material.",urTitle:"لکھیں اور دوبارہ چیک کریں",urText:"قدر اور اکائی لکھیں۔ مواد کاٹنے یا منگوانے سے پہلے دوبارہ پیمائش کریں۔"}
+];
+let step=0,urdu=false;
+const $=id=>document.getElementById(id);
+function toast(msg){$('toast').textContent=msg;$('toast').style.display='block';setTimeout(()=>$('toast').style.display='none',2400)}
+function renderStep(){const s=steps[step];$('stepIcon').textContent=s.icon;$('stepTitle').textContent=urdu?s.urTitle:s.title;$('stepText').textContent=urdu?s.urText:s.text;$('stepCount').textContent=urdu?`مرحلہ ${step+1} از 3`:`STEP ${step+1} OF 3`;$('prevStep').disabled=step===0;$('nextStep').textContent=step===2?(urdu?'دوبارہ شروع کریں':'Start again'):(urdu?'اگلا مرحلہ ←':'Next step →')}
+$('prevStep').onclick=()=>{step=Math.max(0,step-1);renderStep()};
+$('nextStep').onclick=()=>{step=step===2?0:step+1;renderStep()};
+$('resetGuide').onclick=()=>{step=0;renderStep();toast(urdu?'رہنمائی دوبارہ شروع ہوگئی':'Guide restarted')};
+function speak(text){if(!('speechSynthesis'in window)){toast('Audio reading is not supported in this browser.');return}speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(text);u.lang=urdu?'ur-PK':'en-US';speechSynthesis.speak(u)}
+$('readStep').onclick=()=>speak(urdu?steps[step].urTitle+'. '+steps[step].urText:steps[step].title+'. '+steps[step].text);
+$('speakBtn').onclick=()=>speak(urdu?'ناپا ساتھی۔ اعتماد سے پیمائش کریں۔ ضیاع کم کریں۔':'NapaSaathi. Measure with confidence. Waste less.');
+function calc(){let l=Number($('length').value),w=Number($('width').value),u=Number($('used').value);if(!(l>0&&w>0&&u>=0&&u<=100)){toast('Enter positive dimensions and a use percentage from 0 to 100.');return}let total=l*w,left=total*(1-u/100);$('total').textContent=Math.round(total).toLocaleString()+' cm²';$('totalM').textContent=(total/10000).toFixed(2)+' m²';$('leftover').textContent=Math.round(left).toLocaleString()+' cm²';$('leftM').textContent=(left/10000).toFixed(2)+' m² · '+(100-u).toFixed(0)+'% estimated leftover';$('usedM').textContent=u.toFixed(0)+'%';$('leftPercent').textContent=(100-u).toFixed(0)+'%';$('reuseTip').textContent=left===0?'Great!':left<1000?'Save':'Reuse';$('reuseText').textContent=left===0?'Your plan uses all of the estimated area.':left<1000?'Keep small offcuts for samples, patches, or testing.':'Plan leftover material for patches, samples, repair kits, or community craft projects.'}
+$('calculate').onclick=calc;['length','width','used'].forEach(id=>$(id).addEventListener('input',calc));
+$('langBtn').onclick=()=>{urdu=!urdu;document.documentElement.lang=urdu?'ur':'en';$('app').classList.toggle('lang-ur',urdu);document.querySelectorAll('[data-en][data-ur]').forEach(el=>el.textContent=urdu?el.dataset.ur:el.dataset.en);$('speakBtn').textContent=urdu?'🔊 سنیں':'🔊 Listen';$('readStep').textContent=urdu?'🔊 یہ مرحلہ سنیں':'🔊 Read this step aloud';$('resetGuide').textContent=urdu?'دوبارہ شروع کریں':'Start again';$('prevStep').textContent=urdu?'→ پچھلا':'← Back';renderStep();calc()};
+calc();renderStep();
+</script>
+</body>
+</html>
